@@ -2,7 +2,7 @@
 
 GitHub Pages deployment repository for the six-dot pursuit experiment.
 
-**Deployment pending:** the repository is prepared, but no production website has been published yet. The addresses below are planned destinations, not verified live links.
+The Pages workflow publishes the production archive. Check the Actions tab for the latest deployment status.
 
 - Participant entry: https://by2300-creator.github.io/revisit-pursuit-experiment/six-dot-motion
 - Experimenter dashboard: https://by2300-creator.github.io/revisit-pursuit-experiment/experimenter
@@ -16,7 +16,7 @@ Eye tracking is enabled in the published study configuration. Each participant m
 
 ## Deployment
 
-Once the production build succeeds, `site.zip` will contain the static website. Set repository Settings > Pages > Source to GitHub Actions. Save the deployment workflow as `.github/workflows/pages.yml`; uploading the archive and WebGazer source package will trigger publication.
+`site.zip` contains the production website. Repository Settings > Pages > Source is set to GitHub Actions. The workflow in `.github/workflows/pages.yml` publishes updates when the archive or WebGazer source package changes.
 
 Rebuild from the local ReVISit project using PowerShell 7:
 
