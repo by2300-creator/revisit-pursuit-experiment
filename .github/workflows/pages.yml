@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths:
       - site.zip
-      - webgazer-3.5.3.tgz
+      - realeye-runtime.zip
   workflow_dispatch:
 permissions:
   contents: read
@@ -25,7 +25,7 @@ jobs:
       - name: Unpack tested website
         run: |
           unzip -q site.zip -d site
-          cp webgazer-3.5.3.tgz site/six-dot-motion/vendor/
+          unzip -q realeye-runtime.zip -d site
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
