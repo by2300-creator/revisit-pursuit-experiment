@@ -6,7 +6,7 @@ The complete ReVISit JSON download is the authoritative export. Preserve it alon
 
 Registration → optional demographics → instructions → 20 training trials → break → 30 formal trials with extra attention checks immediately after formal trial 10 and 20 → debrief → thank you → Finish and download data.
 
-Confidence: 1 not confident; 2 slightly confident; 3 moderately confident; 4 confident; 5 very confident. This differs from earlier 4-point pilot data; use study version 4.0.0 and `dataVersion=pursuit-detailed-v2` to separate versions.
+Confidence: 1 not confident; 2 slightly confident; 3 moderately confident; 4 confident; 5 very confident. This differs from earlier 4-point pilot data; use the recorded study version and `dataVersion=pursuit-detailed-v2` to separate versions.
 
 ## Participant records
 
@@ -37,7 +37,7 @@ Coordinates are CSS viewport pixels or 900 × 560 logical canvas pixels as label
 
 ## Eye tracking
 
-`eyeTracking` (JSON) includes provider, status, calibration validation targets/errors/sample counts, all calibration attempts for that camera session, startup error, timing origin and events. WebGazer's Kalman prediction filter and implicit mouse training are disabled. Only the explicit calibration points train the model.
+`eyeTracking` (JSON) includes provider, status, calibration validation targets/errors/sample counts, all calibration attempts for that camera session, startup error, timing origin and events. Study 4.1.0 uses RealEye Webcam Eye Tracker Light Open 1.1.0. Participants click 17 calibration targets and then follow five validation targets. Study 4.0.0 used WebGazer.
 
 All provider gaze callbacks during fixation and motion are retained (no artificial 20 Hz downsampling), including null/invalid gaze. Samples include viewport/canvas coordinates, inside-canvas status, visibility, frame age, simulation time and displayed dot coordinates. A 20,000-sample cap has an explicit dropped-sample count. Response-screen gaze is not recorded. Quality summaries include valid/missing/inside counts, valid fraction and maximum inter-callback gap. Callback absence cannot be interpreted as zero error or valid fixation.
 
