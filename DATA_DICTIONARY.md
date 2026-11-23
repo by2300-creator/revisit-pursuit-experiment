@@ -37,7 +37,7 @@ Coordinates are CSS viewport pixels or 900 × 560 logical canvas pixels as label
 
 ## Eye tracking
 
-`eyeTracking` (JSON) includes provider, status, calibration validation targets/errors/sample counts, all calibration attempts for that camera session, startup error, timing origin and events. Study 4.1.0 uses RealEye Webcam Eye Tracker Light Open 1.1.0. Participants click 17 calibration targets and then follow five validation targets. Study 4.0.0 used WebGazer.
+`eyeTracking` (JSON) includes provider, status, calibration validation targets/errors/sample counts, all calibration attempts for that camera session, startup error, timing origin and events. Studies 4.1.0 and 4.2.0 use RealEye Webcam Eye Tracker Light Open 1.1.0. Participants click 17 calibration targets and then follow five validation targets. Study 4.2.0 records the calibration protocol, accepted training frame counts, and validation counts, duration and median error at each target. Each of the five targets requires at least eight valid estimates and a median error no greater than 15% of the shorter viewport dimension. Study 4.0.0 used WebGazer.
 
 All provider gaze callbacks during fixation and motion are retained (no artificial 20 Hz downsampling), including null/invalid gaze. Samples include viewport/canvas coordinates, inside-canvas status, visibility, frame age, simulation time and displayed dot coordinates. A 20,000-sample cap has an explicit dropped-sample count. Response-screen gaze is not recorded. Quality summaries include valid/missing/inside counts, valid fraction and maximum inter-callback gap. Callback absence cannot be interpreted as zero error or valid fixation.
 
