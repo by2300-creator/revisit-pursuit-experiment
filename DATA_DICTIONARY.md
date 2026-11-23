@@ -35,6 +35,12 @@ Confidence: 1 not confident; 2 slightly confident; 3 moderately confident; 4 con
 
 Coordinates are CSS viewport pixels or 900 × 560 logical canvas pixels as labeled. Performance clocks are milliseconds, simulation clocks are milliseconds, and motion diagnostics use seconds where labeled. Use the logged coordinate conventions rather than assuming device pixels or visual degrees.
 
+## Mouse and trackpad tracking (study 4.3.0)
+
+In the full ReVISit JSON, parse each trial’s `trialTelemetry` string and read `frames[i].mouse`. Fixation and motion frames record the latest observed mouse or trackpad cursor over the stimulus, even if it is stationary. Each sample contains `x` and `y` in logical canvas coordinates (900 × 560), `clientX` and `clientY` in viewport CSS pixels, `buttons` as a bit mask and `eventAgeMs` since the last observed mouse event. Use the same frame’s `t`, `phase`, `simulationMs` and `dots` for alignment. This provides one sample per recorded display frame, rather than every raw hardware movement.
+
+A null sample means the cursor was outside the stimulus, had not been observed or was unavailable. Touch and pen contacts do not supply mouse observations. Response frames omit the mouse field; response clicks remain in the interaction log. The feature works with webcam tracking on or off. Older study versions omit this field entirely.
+
 ## Eye tracking
 
 `eyeTracking` (JSON) includes provider, status, calibration validation targets/errors/sample counts, all calibration attempts for that camera session, startup error, timing origin and events. Studies 4.1.0 and 4.2.0 use RealEye Webcam Eye Tracker Light Open 1.1.0. Participants click 17 calibration targets and then follow five validation targets. Study 4.2.0 records the calibration protocol, accepted training frame counts, and validation counts, duration and median error at each target. Each of the five targets requires at least eight valid estimates and a median error no greater than 15% of the shorter viewport dimension. Study 4.0.0 used WebGazer.
