@@ -4,13 +4,13 @@ The complete ReVISit JSON download is the authoritative export. Preserve it alon
 
 ## Study flow
 
-Registration → optional demographics → instructions → 20 training trials → break → 30 formal trials with extra attention checks immediately after formal trial 10 and 20 → debrief → thank you → Finish and download data.
+Consent → registration → instructions → two practice trials with feedback → 30 main trials with a break and an additional attention check after trials 10 and 20 → optional demographics → debrief → thank you → download.
 
 Confidence: 1 not confident; 2 slightly confident; 3 moderately confident; 4 confident; 5 very confident. This differs from earlier 4-point pilot data; use the recorded study version and `dataVersion=pursuit-detailed-v2` to separate versions.
 
 ## Participant records
 
-- `participantAssignment`: participant number, A–F tag/cohort, seed/order assignment. ReVISit also stores its generated participant identifier.
+- `participantAssignment`: participant number, A–F tag/cohort, seed/order assignment. New registrations include a nested `consent` object with `decision`, `version`, and `agreedAt` (UTC ISO timestamp). ReVISit also stores its generated participant identifier.
 - `demographics` (JSON): optional age, gender, current vision correction, known color-vision difficulty, handedness and input device. Blank age is null; skipped categorical questions are `prefer_not_to_answer`. Includes update time, elapsed time, and browser/display environment. No name or contact information is requested.
 - `debriefViewedAt`: ISO timestamp when the participant reaches the debrief; camera is stopped here.
 - ReVISit answer records retain component identifiers and step start/end timestamps. Use endTime for the Next/Continue submission boundary; the custom interaction log is captured through the latest response change, not a separate timestamp for the framework's Next click.

@@ -4,7 +4,7 @@ GitHub Pages deployment repository for the six-dot pursuit experiment.
 
 The Pages workflow publishes the production archive. Check the Actions tab for the latest deployment status.
 
-Current study: **4.4.0**. The study includes two practice trials with feedback and 30 main trials. After main trials 10 and 20 participants can rest and then complete an additional attention check. Optional demographics follow the trials. Confidence uses five labeled levels. See [DATA_DICTIONARY.md](DATA_DICTIONARY.md) for detailed recordings and validation requirements. Launch a fresh participant after updates; do not mix incomplete sessions from different versions.
+Current study: **4.5.0**. Participants read the consent form before registration. Agreement opens registration and declining ends the session. The study includes two practice trials with feedback and 30 main trials. After main trials 10 and 20 participants can rest and then complete an additional attention check. Optional demographics follow the trials. Confidence uses five labeled levels. See [DATA_DICTIONARY.md](DATA_DICTIONARY.md) for detailed recordings and validation requirements. Launch a fresh participant after updates; do not mix incomplete sessions from different versions.
 
 - Participant entry: https://by2300-creator.github.io/revisit-pursuit-experiment/six-dot-motion
 - Experimenter dashboard: https://by2300-creator.github.io/revisit-pursuit-experiment/experimenter
